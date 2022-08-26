@@ -7,6 +7,7 @@ import {
     StyleSheet,
     TextInput,
     StatusBar,
+    
   } from "react-native";
 
 import Home from "./Pages/Home";
@@ -24,11 +25,11 @@ export default function Routes(){
     return(
         <Tab.Navigator style = {styles.container}>
                <Tab.Screen 
-        name = "Cotizaciones" 
+        name = "Login" 
         component={Home} 
         options= {{
             tabBarIcon: ({size, color}) => (
-<Entypo name= "list" size={size} color={color} />
+<Feather name= "edit-2" size={size} color={color} />
             )
         }}
         />
@@ -45,12 +46,12 @@ export default function Routes(){
 
  
 <Tab.Screen 
-         name = "Nuevo Usuario" 
+         name = "Cotizaciones en Tiempo Real" 
          component={New} 
          options= {{
-            tabBarLabel: "",
+            tabBarLabel: "Nuevo",
             tabBarIcon: ({size, color}) => (
-            <ButtonNew size={size} color={color}/>
+<Feather name= "list" size={size} color={color} />
             )
         }}
          />
